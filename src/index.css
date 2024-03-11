@@ -1,0 +1,321 @@
+header {
+  background-color: #007bff; /* Dark gray background */
+  color: #ffffff; /* White text */
+  display: flex;
+  align-items: center;
+  height: 60px; /* Increase header height for better visibility */
+  padding: 0 20px; /* Add padding only on left and right sides */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow : 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 50px;
+  height: 50px; /* Adjust height for better proportion */
+  margin-right: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold;
+  text-transform: uppercase; /* Convert text to uppercase */
+  flex: 1; /* Let the title take up remaining space */
+}
+
+/* Animation for the title */
+.title {
+  animation: slideIn 1s ease-in-out; /* Adjust animation properties as needed */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.form-wrapper {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  box-shadow : 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  padding-top: 0px;
+  margin : 10px auto;
+  height: auto;
+  width : auto;
+  justify-content: center;
+  align-items : center;
+  transition: all 0.3s ease;
+  margin-bottom: 0px;
+  margin-right : 20px;
+}
+
+.container2 {
+  border : 2px solid #ccc;
+  border-radius : 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding : 5px;
+  margin : 10px auto;
+  height : auto;
+  width : auto;
+  justify-content: center;
+  align-items: center;
+  transition : all 0.3s ease;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight : bold;
+  color : #0878f0;
+  margin-bottom : 9px;
+}
+.msg {
+  font-weight : bold;
+  color : #4194a8;
+  margin : 2px;
+  font-size : 16px;
+  padding : 4px bottom;
+}
+
+
+.input-wrapper {
+  width: 99%;
+  
+  margin-bottom: 10px;
+}
+
+.input-wrapper label {
+  font-weight: bold;
+  margin-right: 5px;
+
+}
+
+.input-wrapper input[type="range"],
+.input-wrapper input[type="date"],
+.input-wrapper select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calculate-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin : 10px;
+  font-size : 20px;
+  font-weight : bold;
+}
+
+.calculate-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for table header */
+thead th {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+/* Style for table body */
+tbody td {
+  border: none;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+/* Alternate row color */
+tbody tr:nth-child(even) {
+  background-color: #98bddb;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #1878a1;
+}
+
+canvas {
+  width: auto;
+  max-width: 600px; /* Limit the maximum width of the chart */
+  margin: 10px auto; /* Center the chart horizontally with some spacing */
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Centers the charts horizontally */
+}
+
+.chart,
+.pie-chart {
+  margin-bottom: 20px; /* Optional: Adds space between the charts */
+}
+
+.chart-canvas {
+  width: 400px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  margin-top: 5px ;
+}
+.pie-chart-canvas {
+  width : 230px;
+  height : 200px;
+}
+
+
+
+.chart-title {
+  text-align: center;
+}
+
+.pie-chart-text {
+  text-align: center;
+  font-weight:bold;
+  font-size: 12px; /* Adjust font size as needed */
+  color: #974646; /* Adjust color as needed */
+  margin-top: 2px; /* Add some top margin for spacing */
+}
+
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  margin-bottom: 2px;
+  margin-top : 2px; /* Optional: Add some margin for spacing */
+}
+
+.input-wrapper label {
+  font-weight: bold;
+  margin-bottom: 2px;
+  
+}
+
+.input-wrapper input[type="range"] {
+  width: 100%;
+  margin-bottom: 2px; /* Optional: Add some margin between the slider and the text field */
+}
+
+.input-wrapper input[type="text"] {
+  width: 20%;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 2px;
+  
+}
+
+
+
+
+
+.download-button {
+  background-color: #3a78bb; /* Blue background color */
+  color: #ffffff; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  cursor: pointer; /* Add pointer cursor on hover */
+  border-radius: 4px; /* Add border radius */
+  margin-top: 10px; /* Add margin */  
+}
+
+.download-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.standing-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.standing-boy {
+  max-width: 200px;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  
+  position: relative; /* Added to establish positioning context */
+}
+
+.standing-boy img {
+  width: 100%;
+}
+
+.standing-boy-msg {
+  position: absolute; /* Changed back to absolute */
+  top: 0px; /* Adjusted to move the message above the boy */
+  left: 0%;
+  transform: translateX(-60%);
+  background-color: rgba(216, 210, 122, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  color:black;
+  
+}
+
+
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  background-color: #c52020;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable scrolling if content exceeds box height */
+
+}
+
+.message {
+  padding: 10px;
+
+}
+
+.message p {
+  margin: 0;
+
+}
+
+.message:nth-child(even) {
+  background-color: #eed590; /* Alternate background color for even messages */
+}
+
+.message:nth-child(odd) {
+  background-color: #86e9d3; /* Alternate background color for odd messages */
+}
+
+
+body {
+  background-color: #d2e4e4;
+}
