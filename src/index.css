@@ -54,12 +54,12 @@ header {
   align-items : center;
   transition: all 0.3s ease;
   margin-bottom: 0px;
-  margin-right : 20px;
+  margin-right : 10px;
 }
 
 .container2 {
   border : 2px solid #ccc;
-  border-radius : 10px;
+  border-radius : 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding : 5px;
   margin : 10px auto;
@@ -177,16 +177,16 @@ canvas {
 
 .chart,
 .pie-chart {
-  margin-bottom: 20px; /* Optional: Adds space between the charts */
+  margin-bottom: 3px; /* Optional: Adds space between the charts */
 }
 
 .chart-canvas {
-  width: 400px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
+  width: 580px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
   margin-top: 5px ;
 }
 .pie-chart-canvas {
-  width : 230px;
+  width : 220px;
   height : 200px;
 }
 
@@ -199,9 +199,17 @@ canvas {
 .pie-chart-text {
   text-align: center;
   font-weight:bold;
-  font-size: 12px; /* Adjust font size as needed */
-  color: #974646; /* Adjust color as needed */
-  margin-top: 2px; /* Add some top margin for spacing */
+  font-size: 18px; /* Adjust font size as needed */
+  color: #1056d8; /* Adjust color as needed */
+  margin: 0px 0px;
+}
+
+.pie-chart-sub-text {
+  text-align: center;
+  font-size: 18px; /* Adjust font size as needed */
+  color: #000000;
+  margin-bottom: 20px;
+  margin-top:2px;
 }
 
 
@@ -245,6 +253,7 @@ canvas {
   cursor: pointer; /* Add pointer cursor on hover */
   border-radius: 4px; /* Add border radius */
   margin-top: 10px; /* Add margin */  
+  margin-right: 20px;
 }
 
 .download-button:hover {
@@ -254,14 +263,14 @@ canvas {
 
 .standing-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
 }
 
 .standing-boy {
   max-width: 200px;
   background-color: transparent;
-  padding: 20px;
+  padding: 0px;
   border-radius: 5px;
   
   position: relative; /* Added to establish positioning context */
@@ -308,14 +317,257 @@ canvas {
 }
 
 .message:nth-child(even) {
-  background-color: #eed590; /* Alternate background color for even messages */
+  background-color: black;
+  color:white; /* Alternate background color for even messages */
 }
 
 .message:nth-child(odd) {
-  background-color: #86e9d3; /* Alternate background color for odd messages */
+  background-color: white; 
+  color: black/* Alternate background color for odd messages */
 }
 
 
 body {
-  background-color: #d2e4e4;
+  background-color: white;
 }
+
+
+
+
+
+
+.btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #1488f5;
+  --color-outline: #0c296b80;
+  --color-shadow: #00000080;
+  margin-top : 10px;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 50px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover, .btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+
+
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: #0084ff;
+  background: linear-gradient(0deg, rgb(0, 119, 255) 0%, rgb(95, 159, 255) 100%);
+  border: 2px solid #0084ff;
+  border-radius: 20em;
+  margin: 10px;
+  padding: 10px;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  border-color: white;
+  box-shadow: 0 0.5em 1.5em -0.5em #0043bf;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #0043bf;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* or any other appropriate value */
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Adjust alignment as needed */
+}
+
+.pie-chart-container {
+  display: flex;
+  align-items: center;
+}
+
+.pie-chart {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.pie-chart-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card {
+  width: 260px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.chat-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chat-header button {
+  border : 1px solid white;
+  background : none;
+  cursor : pointer; 
+  color : white;
+  
+}
+
+.chat-window {
+  height: 220px;
+  overflow-y: scroll;
+}
+
+.message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.send-button {
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+

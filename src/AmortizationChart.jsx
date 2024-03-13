@@ -1,5 +1,7 @@
 import React, { useState,useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
+import 'chartjs-plugin-datalabels'
+//import { backgroundClip } from 'html2canvas/dist/types/css/property-descriptors/background-clip';
 //import ChartDataLabels from 'chartjs-plugin-labels';
 
 
@@ -72,7 +74,6 @@ function AmortizationChart({ repaymentSchedule }) {
         labels: ['Principal', 'Interest'],
         datasets: [
           {
-            label: 'Payment Breakdown',
             data: [
               totalPayment.toFixed(2),
               totalInterest.toFixed(2)              
@@ -92,7 +93,7 @@ function AmortizationChart({ repaymentSchedule }) {
               return `${percentage.toFixed(2)}%`;
             }
           }
-        }
+        },
       }
     });
 
@@ -112,14 +113,21 @@ function AmortizationChart({ repaymentSchedule }) {
       <div className="chart"> 
         <canvas ref={chartRef} className="chart-canvas " />
       </div>
+      <div className='pie-chart-container'>
       <div className="pie-chart">
         {/* <h2 className="chart-title">Payment Breakdown</h2> */}
         <canvas ref={pieChartRef} className="pie-chart-canvas" />
-        <p className = "pie-chart-text">Repayment amount per installment : {installmentPayment.toFixed(2)}</p>
-        <p className = "pie-chart-text">Total payment : {totalPayment.toFixed(2)}</p>
-        <p className = "pie-chart-text">Interest : {totalInterest.toFixed(2)}</p>
+        </div>
+        <div className='pie-chart-info'>
+        <p className = "pie-chart-text">Repayment amount per installment</p>
+        <p className = "pie-chart-sub-text">{installmentPayment.toFixed(2)}</p>
+        <p className = "pie-chart-text">Total payment</p>
+        <p className = "pie-chart-sub-text">{totalPayment.toFixed(2)}</p>
+        <p className = "pie-chart-text">Interest</p>
+        <p className = "pie-chart-sub-text">{totalInterest.toFixed(2)}</p>
+        </div>
       </div>
-      </div>
+      </div>  
       </>
   );
 }
